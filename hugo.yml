@@ -1,0 +1,40 @@
+baseURL: 'http://kspears.com/'
+languageCode: 'en-us'
+title: 'kspears.com'
+theme: 'anatole'
+
+params:
+  title: "kspears.com"
+  author: "Kevin Spears"
+  description: "Another IT Blog on the web"
+  profilePicture: "images/kevin2.png"
+  utterances:
+    repo: "kspears/kspearssite"
+    issue-term: "pathname"
+    theme: "github-light"
+  socialIcons:
+    - icon: "fab fa-linkedin"
+      title: "Linkedin"
+      url: "https://www.linkedin.com/in/kevin-spears/"
+    - icon: "fab fa-github"
+      title: "Github"
+      url: "https://github.com/kspears/"
+
+
+
+menu:
+  main:
+  - name: "Home"
+    identifier: "home"
+    weight: 100
+    url: "/"
+  - name: "Posts"
+    weight: 200
+    identifier: "posts"
+    url: "/posts/"
+
+#  [[menu.main]]
+#  name :"About"
+#  weight :300
+#  identifier :"about"
+#  url :"/about/"
