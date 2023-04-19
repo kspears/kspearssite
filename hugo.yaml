@@ -3,7 +3,7 @@ languageCode: 'en-us'
 title: 'kspears.com'
 theme: 'anatole'
 
-disqusShortname: "macwebguy"
+#disqusShortname: "macwebguy"
 
 summarylength: 10
 enableEmoji: true
@@ -19,6 +19,11 @@ params:
   author: "Kevin Spears"
   description: "Another IT Blog on the web"
   profilePicture: "images/kevin2.png"
+  utterances:
+    repo: "kspears/kspearssite"
+    issueTerm: "pathname"
+    theme: "github-light"
+    label: "Comment"  
   socialIcons:
     - icon: "fab fa-linkedin"
       title: "Linkedin"
@@ -35,10 +40,10 @@ menu:
     identifier: "home"
     weight: 100
     url: "/"
-  - name: "Blog"
+  - name: "Posts"
     weight: 200
-    identifier: "blog"
-    url: "/blog/"
+    identifier: "post"
+    url: "/post/"
 
 #  [[menu.main]]
 #  name :"About"
