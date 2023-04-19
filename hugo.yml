@@ -10,7 +10,7 @@ params:
   profilePicture: "images/kevin2.png"
   utterances:
     repo: "kspears/kspearssite"
-    issue-term: "pathname"
+    issueTerm: "pathname"
     theme: "github-light"
   socialIcons:
     - icon: "fab fa-linkedin"
