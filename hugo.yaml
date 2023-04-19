@@ -12,6 +12,7 @@ params:
     repo: "kspears/kspearssite"
     issueTerm: "pathname"
     theme: "github-light"
+    label: "Comment"
   socialIcons:
     - icon: "fab fa-linkedin"
       title: "Linkedin"
