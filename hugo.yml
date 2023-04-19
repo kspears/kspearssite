@@ -28,10 +28,10 @@ menu:
     identifier: "home"
     weight: 100
     url: "/"
-  - name: "Posts"
+  - name: "Blog"
     weight: 200
-    identifier: "posts"
-    url: "/posts/"
+    identifier: "blog"
+    url: "/blog/"
 
 #  [[menu.main]]
 #  name :"About"
