@@ -2,7 +2,7 @@ baseURL = 'http://kspears.com/'
 languageCode = 'en-us'
 title = 'kspears.com'
 theme = 'anatole'
-
+disqusShortname = 'macwebuy'
 [params]
 title = "kspears.com"
 author = "Kevin Spears"
