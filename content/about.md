@@ -5,4 +5,4 @@ draft: true
 ---
 
 ## Who am I...
-Good question, I'm an IT professional who's worked in everyting from desktop support to server administration to software development and now I'm a engineering manager. 
+Good question, I'm an IT professional who's worked in everything from desktop support to server administration to software development and now I'm a engineering manager. 
