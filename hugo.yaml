@@ -41,13 +41,11 @@ menu:
     identifier: "home"
     weight: 100
     url: "/"
+  # - name: "About"
+  #   identifier: "about"
+  #   weight: 200
+  #   url: "/about/"
   - name: "Posts"
-    weight: 200
+    weight: 300
     identifier: "post"
     url: "/post/"
-
-#  [[menu.main]]
-#  name :"About"
-#  weight :300
-#  identifier :"about"
-#  url :"/about/"
