@@ -8,9 +8,9 @@ categories:
 tags:
   - "Mail"
   - "Mailcow"
-# featureImage: "mailcow.png"
+# thumbnail: "images/mailcow-sm.png"
 ---
-![:left](mailcow.png)
+![:left](/images/mailcow.png)
 
 So with the announcement that my freeloading for email hosting on Google is [coming to an end](https://support.google.com/a/answer/2855120?product_name=UnuFlow&hl=en&visit_id=637812405048408439-1951323816&rd=1&src=supportwidget0&hl=en) I decided to go down the road of setting up my own email server as I figured since I was going to have to pay for email going forward why not just host it. Is this a good idea? I'm not sure, it seems like there are lots of blog posts that tell you not to host your own email but in my situation I have several custom domains that i was feeding into google with around 20 family ~~freeloaders~~ users and cost became an issue.
 

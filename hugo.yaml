@@ -20,6 +20,8 @@ params:
   description: "Another IT Blog on the web"
   profilePicture: "images/kevin2.png"
   contentratio: 0.7
+  relatedPosts:
+    numberOfRelatedPosts: 3
   utterances:
     repo: "kspears/kspearssite"
     issueTerm: "pathname"

@@ -1,5 +1,5 @@
 ---
-title: "Aws Recertification"
+title: "AWS Solution Architect Professional"
 date: 2023-05-23T09:07:16-07:00
 Description: ""
 draft: false
@@ -9,6 +9,7 @@ Tags:
 Categories:
     - Training
 DisableComments: false
+# thumbnail: "images/aws-certified-solutions-architect-professional.png"
 ---
 
 I had let my AWS Solution Architect Professional certification expire as I didn't have a lot of spare time during my previous role. So I figured now with my surplus of time I would work on renewing it. 
@@ -26,3 +27,9 @@ The challenges are good brain problems, trying to figure out in your head how yo
 
 ## Good Luck!
 I plan to take the test next month, I'm wrapping up training over the next few weeks. I hope you found this post helpful and encouraging!
+
+---
+
+## July 2023 Update... 
+I passed! 
+![target](/images/aws-certified-solutions-architect-professional.png)(https://www.credly.com/badges/adedf6ec-f473-4c16-92e9-c8fb51bb5ddd/public_url)
