@@ -8,8 +8,8 @@ Tags:
 Categories: 
   - "Hosting"
 DisableComments: false
+thumbnail: "images/mailcow-sm.png"
 ---
-![:left](/images/mailcow.png)
 I've been hosting my personal domain's email on [Mailcow](https://mailcow.email/) for over a year now after Google apps started charging for their service and I have to say it works pretty good. I had an good architecture to start but needed to iterate on the design of the infrastructure. A few things that changed was I did swap out EFS for a 2nd EBS data volume that was dynamically attached at EC2 boot time. I moved my s3 back backups into glacier to reduce costs. And I did end up needing to upgrade my Ec2 to larger instance, I still need to revisit the metrics on this to determine if it was really necessary. But you know how it is when you break something and the family is using it... you hear about it.
 
 ## AWS Hosting

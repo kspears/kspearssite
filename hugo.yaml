@@ -1,11 +1,12 @@
 baseURL: 'http://kspears.com/'
 languageCode: 'en-us'
 title: 'kspears.com'
-theme: 'anatole'
+theme: "github.com/lxndrblz/anatole"
+#theme: "github.com/theNewDynamic/gohugo-theme-ananke"
 # https://github.com/lxndrblz/anatole/wiki/📄-Content-Settings theme settings
 #disqusShortname: "macwebguy"
 
-summarylength: 10
+summarylength: 30
 enableEmoji: true
 enableRobotsTXT: true
 
@@ -17,11 +18,11 @@ pygmentsCodefencesGuessSyntax: true
 params:
   title: "kspears.com"
   author: "Kevin Spears"
-  description: "Another IT Blog on the web"
-  profilePicture: "images/kevin2.png"
+  description: "Cloud, Technology, Life and more"
+  profilePicture: "images/kevin_head.png"
   contentratio: 0.7
-  relatedPosts:
-    numberOfRelatedPosts: 3
+  relatedPosts: true
+  numberOfRelatedPosts: 3
   utterances:
     repo: "kspears/kspearssite"
     issueTerm: "pathname"
@@ -51,3 +52,4 @@ menu:
     weight: 300
     identifier: "post"
     url: "/post/"
+

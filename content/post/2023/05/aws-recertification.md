@@ -9,7 +9,7 @@ Tags:
 Categories:
     - Training
 DisableComments: false
-# thumbnail: "images/aws-certified-solutions-architect-professional.png"
+thumbnail: "images/aws_certified_logo.png"
 ---
 
 I had let my AWS Solution Architect Professional certification expire as I didn't have a lot of spare time during my previous role. So I figured now with my surplus of time I would work on renewing it. 
