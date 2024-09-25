@@ -36,7 +36,10 @@ params:
       title: "Github"
       url: "https://github.com/kspears/"
 
-
+  taxonomies:
+    category: "categories"
+    series: "series"
+    tags: "tags"
 
 menu:
   main:

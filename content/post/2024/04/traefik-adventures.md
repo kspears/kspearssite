@@ -7,6 +7,7 @@ Tags:
   - "Docker"
 Categories:
   - "Hosting"
+toc: true
 DisableComments: false
 thumbnail: "images/traefik-logo.jpeg"
 ---
