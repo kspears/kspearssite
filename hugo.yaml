@@ -47,10 +47,10 @@ menu:
     identifier: "home"
     weight: 100
     url: "/"
-  # - name: "About"
-  #   identifier: "about"
-  #   weight: 200
-  #   url: "/about/"
+  - name: "Me"
+    identifier: "about"
+    weight: 400
+    url: "/about/"
   - name: "Posts"
     weight: 300
     identifier: "post"
