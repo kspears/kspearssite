@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+
+<a href="/posts.html" class="back-link">← All posts</a>
+
+<article>
+  {% if featuredImage %}
+  <div class="post-featured-img">
+    <img src="{{ featuredImage }}" alt="{{ featuredImageAlt or title }}">
+  </div>
+  {% endif %}
+  <h1>{{ title }}</h1>
+  <div class="post-meta">{{ date | dateDisplay }}{% if category %} · {{ category }}{% endif %}</div>
+
+  {{ content | safe }}
+</article>

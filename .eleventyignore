@@ -1,0 +1,8 @@
+node_modules
+_site
+.git
+wrangler.toml
+package.json
+package-lock.json
+README.md
+.eleventyignore

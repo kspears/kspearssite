@@ -1,0 +1,12 @@
+{
+  "name": "kspearssite",
+  "version": "1.0.0",
+  "description": "kspears.com - static site built with Eleventy",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
