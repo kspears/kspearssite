@@ -1,0 +1,554 @@
+/* kspears.com - Runner · Software Engineer · Oregon */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Oregon-inspired palette: forest, mist, wood */
+  --forest: #1e4d3b;
+  --forest-light: #2d6a52;
+  --mist: #4a6fa5;
+  --mist-light: #6b8cae;
+  --slate: #36454f;
+  --wood: #8b6914;
+  --wood-light: #a67c00;
+  --cream: #f7f5f0;
+  --cream-warm: #f0ede6;
+  --paper: #fdfcf9;
+  --text: #1a2620;
+  --text-muted: #5c6b62;
+  --border: #dde4df;
+  --code-bg: #1a2620;
+  --code-text: #b8d4c4;
+  --accent: var(--forest);
+  --accent-hover: var(--forest-light);
+  --accent-subtle: #e8f2ed;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 2px 8px rgba(30, 77, 59, 0.06);
+  --shadow-hover: 0 8px 24px rgba(30, 77, 59, 0.1);
+  --max-width: 720px;
+  --nav-height: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--cream);
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Oregon landscape gradient - subtle mountain/tree silhouette feel */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: 
+    linear-gradient(165deg, rgba(30, 77, 59, 0.03) 0%, transparent 30%),
+    linear-gradient(to bottom, rgba(74, 111, 165, 0.04) 0%, transparent 25%),
+    var(--cream);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  padding-top: var(--nav-height);
+  position: relative;
+  z-index: 1;
+}
+
+/* Header - forest bar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 77, 59, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  z-index: 100;
+}
+
+header .header-inner {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+header h1 a:hover {
+  opacity: 0.9;
+}
+
+header nav a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Main content */
+main {
+  padding: 2.5rem 0 4rem;
+}
+
+/* Home page hero - intro block */
+.hero {
+  margin-bottom: 3rem;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, var(--paper) 0%, var(--cream-warm) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--forest), var(--mist));
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--forest);
+  flex-shrink: 0;
+}
+
+.hero-text h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--text);
+}
+
+.hero-text .identity {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.identity-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  color: var(--forest);
+  font-weight: 500;
+}
+
+.identity-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--forest);
+  border-radius: 50%;
+}
+
+.hero-text .tagline {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.section-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--forest);
+}
+
+/* Post list - card style */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list li {
+  padding: 1.25rem 1.25rem;
+  margin-bottom: 0.75rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.post-list li:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--forest-light);
+}
+
+.post-list li:last-child {
+  margin-bottom: 0;
+}
+
+.post-list a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.0625rem;
+  display: block;
+  transition: color 0.2s;
+}
+
+.post-list li:hover a {
+  color: var(--forest);
+}
+
+.post-meta {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+  font-weight: 400;
+}
+
+/* Post featured image */
+.post-featured-img {
+  margin: 0 0 2rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.post-featured-img img {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Article typography */
+article h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+article .post-meta {
+  margin-bottom: 2rem;
+}
+
+article h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1rem 0;
+  color: var(--forest);
+}
+
+article h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 2rem 0 0.75rem 0;
+  color: var(--text);
+}
+
+article p {
+  margin: 0 0 1.25rem 0;
+}
+
+article ul, article ol {
+  margin: 0 0 1.25rem 0;
+  padding-left: 1.5rem;
+}
+
+article li {
+  margin: 0.35rem 0;
+}
+
+article li::marker {
+  color: var(--forest);
+}
+
+/* Code - forest terminal */
+article pre {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+article code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.9em;
+}
+
+article pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+article :not(pre) > code {
+  background: var(--accent-subtle);
+  color: var(--forest);
+  padding: 0.2em 0.45em;
+  border-radius: var(--radius-sm);
+  font-size: 0.9em;
+}
+
+article blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  padding-left: 1.25rem;
+  border-left: 4px solid var(--forest);
+  background: var(--accent-subtle);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--text-muted);
+}
+
+article blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+article th, article td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+article th {
+  background: var(--accent-subtle);
+  font-weight: 600;
+  color: var(--forest);
+}
+
+article tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+article a {
+  color: var(--forest);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+article a:hover {
+  color: var(--forest-light);
+  border-bottom-color: var(--forest-light);
+}
+
+article hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2.5rem 0;
+}
+
+/* Back link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.back-link:hover {
+  color: var(--forest);
+  gap: 0.5rem;
+}
+
+/* Profile / About - elevated card */
+.profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 2rem 0 2.5rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--paper) 0%, var(--cream-warm) 100%);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid var(--forest);
+}
+
+.profile p {
+  margin: 0;
+}
+
+/* Footer - Oregon vibes */
+footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--forest);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--forest-light);
+  text-decoration: underline;
+}
+
+.footer-location {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  opacity: 0.8;
+}
+
+/* Page titles (non-article) */
+main > h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  header .header-inner {
+    padding: 0 1rem;
+  }
+  
+  nav {
+    gap: 1.25rem;
+  }
+  
+  nav a {
+    font-size: 0.875rem;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .hero {
+    padding: 1.5rem 1.25rem;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  article h1 {
+    font-size: 1.75rem;
+  }
+}
