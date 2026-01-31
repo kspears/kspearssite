@@ -270,6 +270,51 @@ main {
   font-weight: 400;
 }
 
+/* Home page post previews (excerpt + Read more) */
+.post-list--preview .post-preview {
+  display: block;
+}
+
+.post-preview__excerpt {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.post-preview__read-more {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--forest);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+.post-preview__read-more:hover {
+  color: var(--forest-light);
+  text-decoration: underline;
+}
+
+.post-preview__title {
+  display: block;
+}
+
+.more-posts {
+  margin-top: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.more-posts a {
+  color: var(--forest);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.more-posts a:hover {
+  text-decoration: underline;
+}
+
 /* Post featured image */
 .post-featured-img {
   margin: 0 0 2rem 0;

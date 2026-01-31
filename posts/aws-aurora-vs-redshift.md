@@ -3,6 +3,7 @@ title: AWS Aurora vs. Redshift for Data Warehousing
 date: 2025-03-01
 tags: posts
 category: Hosting
+excerpt: At work we are looking into moving from a data dumping ground into a real data warehouse solution. So this took me down a rabbit hole of what should we use to host this ever expanding database? Since we are hosting in AWS two commonly considered AWS services for analytical workloads are Amazon Aurora and Amazon Redshift. While both are powerful, they serve different purposes and are optimized for different types of workloads.
 ---
 
 At work we are looking into moving from a data dumping ground into a real data warehouse solution. So this took me down a rabbit hole of what should we use to host this ever expanding database? Since we are hosting in AWS two commonly considered AWS services for analytical workloads are Amazon Aurora and Amazon Redshift. While both are powerful, they serve different purposes and are optimized for different types of workloads. So to sort out which way to go, here's a brief overview of the two solutions that helped me work through this decision:
