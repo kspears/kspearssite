@@ -14,11 +14,11 @@ Over the past several months I've been spending a lot of time with AI-powered co
 
 ## The Editor vs. Terminal Approach
 
-This is the most fundamental difference between the two. Cursor lives inside your editor and feels like an enhanced version of the coding experience you already know. You highlight code, ask a question, get a suggestion, and accept or reject it. It's familiar and low-friction.
+This is the most fundamental difference between the two. Cursor lives inside your editor and feels like an enhanced version of the coding experience you already know. You highlight code, ask a question, get a suggestion, and accept or reject it. It's familiar and low-friction if you're an editor-centric developer.
 
-Claude Code, on the other hand, operates from the terminal. You describe what you want in natural language and it goes off to explore your codebase, make changes across multiple files, run tests, and iterate. It feels less like pair programming and more like delegating a task to a capable junior developer who happens to work at the speed of light.
+Claude Code operates from the terminal. You describe what you want in natural language and it goes off to explore your codebase, make changes across multiple files, run tests, and iterate. It feels less like pair programming and more like delegating a task to a capable junior developer who happens to work at the speed of light.
 
-I've found that each approach has its strengths depending on the type of work I'm doing.
+As someone who already spends most of my time in the terminal, Claude Code felt immediately natural to me. There's no new GUI to learn, no keybindings to memorize, no editor to configure. You just type what you want and it gets to work. That simplicity is a real advantage. Cursor has a lot of features, but with that comes more complexity in terms of learning the different modes, panels, and shortcuts. Claude Code's conversational interface is about as straightforward as it gets.
 
 ## Where Cursor Shines
 
@@ -38,22 +38,24 @@ I've also found Claude Code to be stronger at understanding the broader context 
 
 ## Cost and Model Considerations
 
-Cursor offers a Pro plan at $20/month that includes a generous number of fast completions. It supports multiple models including GPT-4 and Claude, and you can choose which to use. The pricing is straightforward and predictable.
+Cursor offers a Pro plan at $20/month that includes a generous number of fast completions. It supports multiple models including GPT-4 and Claude, and you can choose which to use. The pricing is straightforward, but I found myself hitting limits on the features I actually wanted to use and needing to think about which model to pick for each task.
 
-Claude Code uses Anthropic's API directly with usage-based pricing, or you can use it through a Claude Pro or Max subscription. The Max plan gives you a large amount of usage for a flat fee. Costs can vary depending on how much you use it, especially on larger codebases where context windows fill up quickly.
+Claude Code uses Anthropic's API directly with usage-based pricing, or you can use it through a Claude Pro or Max subscription. For my usage patterns, Claude Code's pricing has been a better fit. I'm not paying for a bundle of editor features I don't need since I'm already comfortable in my terminal and text editor of choice. The Max plan in particular gives a generous amount of usage for a flat monthly fee, which makes costs predictable without locking me into a specific editor.
 
 ## My Workflow
 
-I've settled into a pattern where I use both tools depending on the task at hand. For quick edits, writing new functions in a file I already have open, and inline questions, Cursor is my go-to. It's fast, integrated, and doesn't require me to context-switch out of my editor.
+Since I spend most of my day in the terminal anyway, Claude Code has become my primary AI coding tool. It fits right into the workflow I already had — I'm in a tmux session, I have my files open in vim, and now I have Claude Code in another pane ready to go. There's no context switching involved. I describe what I need, it does the work, and I review the changes in my editor.
 
-For bigger tasks like implementing a new feature across multiple files, debugging a tricky issue that spans several components, or doing significant refactors, I reach for Claude Code. The ability to let it explore the codebase, run commands, and iterate autonomously saves me a lot of time on these more complex tasks.
+For quick edits and writing new code, Claude Code handles those just as well as Cursor does. But for bigger tasks like implementing a new feature across multiple files, debugging a tricky issue, or doing significant refactors, Claude Code pulls ahead because it can run commands, check test output, and iterate without me having to copy-paste anything back and forth.
+
+I gave Cursor a fair shot and it's a solid tool, but I kept finding myself wanting to get back to the terminal. If you're already a VS Code power user, Cursor will probably feel more natural. For me, Claude Code just clicked.
 
 ## Wrap-Up
 
-Both Claude Code and Cursor are impressive tools that genuinely improve developer productivity. They're not really direct competitors in my mind since they excel at different parts of the development workflow.
+Both Claude Code and Cursor are impressive tools that genuinely improve developer productivity. Your preference will likely come down to how you already work.
 
-**Cursor** is the better choice if you want a seamless, editor-integrated AI experience that enhances your existing workflow without changing how you work. It's polished, fast, and the learning curve is minimal.
+**Cursor** is a great choice if you're a VS Code user who wants AI baked into the editor you already know. It's polished and feature-rich, though that richness comes with some added complexity.
 
-**Claude Code** is the better choice when you need an autonomous agent that can tackle complex, multi-step tasks with minimal hand-holding. It's particularly powerful for larger codebases and tasks that involve running commands, debugging test failures, or making sweeping changes.
+**Claude Code** is the better choice if you prefer the terminal, value simplicity, and want an autonomous agent that can tackle complex tasks with minimal hand-holding. It's straightforward to pick up, the pricing works well if you don't need a full IDE subscription, and it's particularly powerful for tasks that involve running commands, debugging test failures, or making changes across a codebase.
 
-If you haven't tried both, I'd recommend giving each a shot. You might find, like I did, that they complement each other nicely rather than being an either-or decision.
+For me, Claude Code has been the clear winner. It's simpler, it fits my terminal-first workflow, the pricing makes more sense for how I work, and it handles everything from quick edits to complex multi-file tasks without needing me to leave the environment I'm most comfortable in. If you're a terminal person, I'd highly recommend giving it a try.
