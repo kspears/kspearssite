@@ -6,17 +6,17 @@ featuredImage: /static/images/mailcow-server.svg
 featuredImageAlt: Self-hosted mail server
 ---
 
-I've been hosting my personal domain's email on [Mailcow](https://mailcow.email/) for over a year now after Google apps started charging for their service and I have to say it works pretty good. I had an good architecture to start but needed to iterate on the design of the infrastructure. A few things that changed was I did swap out EFS for a 2nd EBS data volume that was dynamically attached at EC2 boot time. I moved my s3 back backups into glacier to reduce costs. And I did end up needing to upgrade my Ec2 to larger instance, I still need to revisit the metrics on this to determine if it was really necessary. But you know how it is when you break something and the family is using it... you hear about it.
+I've been hosting my personal domain's email on [Mailcow](https://mailcow.email/) for over a year now after Google apps started charging for their service and I have to say it works pretty well. I had a good architecture to start but needed to iterate on the design of the infrastructure. A few things that changed... I swapped out EFS for a 2nd EBS data volume that was dynamically attached at EC2 boot time. I moved my S3 backups into Glacier to reduce costs. And I did end up needing to upgrade my EC2 to a larger instance, I still need to revisit the metrics on this to determine if it was really necessary. But you know how it is when you break something and the family is using it... you hear about it.
 
 ## AWS Hosting
 
-I do host this on AWS, my reasoning was just keeping my skills sharp. I had originally spin up the stack with Cloudformation to test out some of the latest changes offered in cloudformation but have since converted those scripts to Terraform. Terraform is so simple... there's no comparison.
+I do host this on AWS, my reasoning was just keeping my skills sharp. I had originally spun up the stack with CloudFormation to test out some of the latest changes but have since converted those scripts to Terraform. Terraform is so simple... there's no comparison.
 This is not the cheapest solution, I could host this anywhere or at home but I chose to put it here to continue honing my skills in AWS. Also let's be honest, AWS is a really solid host.
 
 ## Mailcow Pros:
 
 - It's stupid simple to update, they have a script that will pull the latest changes from git, pull docker images, restart services and then clean up after itself.
-- It just works, I've had no real problems other than one's I've created. If you leave it alone it just runs.
+- It just works, I've had no real problems other than ones I've created. If you leave it alone it just runs.
 - Backup and restore works. I've only done full backups and restores so I can't comment on restoring individual messages but I can spin up a empty ec2 instance and bring up my server quickly with a restore from S3.
 
 ## Mailcow Cons:

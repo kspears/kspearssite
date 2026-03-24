@@ -6,7 +6,7 @@ featuredImage: /static/images/k8s-storage-migration.svg
 featuredImageAlt: GP2 to GP3 storage migration
 ---
 
-At work we have a [Stackgres](https://stackgres.io/) kuberentes cluster that hosts our postgres databases. This allows for high availability, easy data recovery and generally is pretty easy to manage. I admit that when I first started looking at postgres on Kubernetes I was pretty skeptical but it's honestly given me very little to complain about. It does have some issues due to how the cluster was initially configured that I am planning to fix in the future.
+At work we have a [Stackgres](https://stackgres.io/) Kubernetes cluster that hosts our Postgres databases. This allows for high availability, easy data recovery and generally is pretty easy to manage. I admit that when I first started looking at postgres on Kubernetes I was pretty skeptical but it's honestly given me very little to complain about. It does have some issues due to how the cluster was initially configured that I am planning to fix in the future.
 
 The K8s cluster was setup with GP2 as the default storage class and so the topic came up a few months ago to migrate to GP3 to increase our IOPs and also reduce cost.
 
@@ -20,7 +20,7 @@ Instead I received a long procedure and thought I'd document it here...
 2. Take a backup... take a backup... take a backup! Don't start this process without a recent backup as you are going to delete volumes.
 3. Set the cluster size to 1, destroying the replica: `kubectl edit sgclusters.stackgres.io -n <<namespace>> <<stackgres_cluster_name>>`
 4. Use `kubectl get pvc` to find the volume claim and release it by deleting it.
-5. User `kubectl get pv` to find the volume and then delete the volume.
+5. Use `kubectl get pv` to find the volume and then delete the volume.
 6. Set the cluster size to 2, creating a new replica: `kubectl edit sgclusters.stackgres.io -n <<namespace>> <<stackgres_cluster_name>>`
 7. watch for the replica to be rebuilt and sync up with the leader: `kubectl exec -it -n <<namespace>> <<stackgres_pod_name>> -c patroni -- patronictl list`
 8. Once the sync is complete, switchover to the replica and then follow the steps to delete the old leader.

@@ -9,7 +9,7 @@ featuredImageAlt: Browser window showing kspears.com
 
 The year of stress and crazy is over and I wanted to get back to working on this blog. I refreshed the theme with something simpler and updated the pipeline... Now I just need to write some content.
 
-And getting back to the original purpose of this blog was to document whatever I'm working on and share it with whomever might be struggling similar issues.
+The original purpose of this blog was to document whatever I'm working on and share it with whoever might be struggling with similar issues.
 
 ### My current TODO list:
 
