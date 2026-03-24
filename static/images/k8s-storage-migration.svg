@@ -1,0 +1,35 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#ffffff"/>
+  <!-- GP2 volumes -->
+  <g transform="translate(220, 120)">
+    <rect x="-60" y="0" width="120" height="90" rx="4" fill="#ffffff" stroke="#c4a882" stroke-width="1.5"/>
+    <rect x="-50" y="15" width="100" height="12" rx="2" fill="#c4a882" opacity="0.2"/>
+    <rect x="-50" y="35" width="100" height="12" rx="2" fill="#c4a882" opacity="0.15"/>
+    <rect x="-50" y="55" width="100" height="12" rx="2" fill="#c4a882" opacity="0.1"/>
+    <text x="0" y="-12" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#8b7355">gp2</text>
+    <text x="0" y="115" text-anchor="middle" font-family="monospace" font-size="10" fill="#7a756e">3000 IOPS max</text>
+  </g>
+  <!-- Arrow -->
+  <g transform="translate(370, 165)">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#b55a3c" stroke-width="2"/>
+    <polygon points="60,-5 72,0 60,5" fill="#b55a3c"/>
+    <text x="36" y="-12" text-anchor="middle" font-family="monospace" font-size="10" fill="#b55a3c">migrate</text>
+  </g>
+  <!-- GP3 volumes -->
+  <g transform="translate(530, 120)">
+    <rect x="-60" y="0" width="120" height="90" rx="4" fill="#ffffff" stroke="#3d7a8a" stroke-width="1.5"/>
+    <rect x="-50" y="15" width="100" height="12" rx="2" fill="#3d7a8a" opacity="0.2"/>
+    <rect x="-50" y="35" width="100" height="12" rx="2" fill="#3d7a8a" opacity="0.15"/>
+    <rect x="-50" y="55" width="100" height="12" rx="2" fill="#3d7a8a" opacity="0.1"/>
+    <text x="0" y="-12" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#3d7a8a">gp3</text>
+    <text x="0" y="115" text-anchor="middle" font-family="monospace" font-size="10" fill="#7a756e">16000 IOPS max</text>
+  </g>
+  <!-- K8s helm -->
+  <g transform="translate(400, 310)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#8b7355" stroke-width="1.5"/>
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#8b7355" stroke-width="1.5"/>
+    <line x1="-10" y1="-6" x2="10" y2="6" stroke="#8b7355" stroke-width="1.5"/>
+    <line x1="-10" y1="6" x2="10" y2="-6" stroke="#8b7355" stroke-width="1.5"/>
+    <text x="30" y="5" text-anchor="start" font-family="monospace" font-size="11" fill="#8b7355">k8s</text>
+  </g>
+</svg>

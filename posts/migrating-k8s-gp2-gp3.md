@@ -2,8 +2,8 @@
 title: Migrating K8s From GP2 to GP3
 date: 2024-09-25
 category: Kubernetes
-featuredImage: /static/images/stackgres_logo.jpg
-featuredImageAlt: Stackgres
+featuredImage: /static/images/k8s-storage-migration.svg
+featuredImageAlt: GP2 to GP3 storage migration
 ---
 
 At work we have a [Stackgres](https://stackgres.io/) kuberentes cluster that hosts our postgres databases. This allows for high availability, easy data recovery and generally is pretty easy to manage. I admit that when I first started looking at postgres on Kubernetes I was pretty skeptical but it's honestly given me very little to complain about. It does have some issues due to how the cluster was initially configured that I am planning to fix in the future.

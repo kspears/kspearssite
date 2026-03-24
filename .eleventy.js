@@ -3,6 +3,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("static");
 
+  eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
+
   // Custom filter for date formatting
   eleventyConfig.addFilter("dateDisplay", function (date) {
     return new Date(date).toLocaleDateString("en-US", {

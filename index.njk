@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: kspears.com
+bodyClass: has-sidebar
 ---
 
 <div class="hero">
@@ -12,22 +13,71 @@ title: kspears.com
     </div>
   </div>
 </div>
-<h2 class="section-title">Recent Posts</h2>
-<ul class="post-list post-list--preview">
-  {% for post in collections.posts | reverse %}
-  {% if loop.index0 < 5 %}
-  <li class="post-preview">
-    <a href="{{ post.url }}" class="post-preview__title">{{ post.data.title }}</a>
-    <div class="post-meta">{{ post.data.date | dateDisplay }}{% if post.data.category %} · {{ post.data.category }}{% endif %}</div>
-    {% set excerptText = post.data.excerpt or (post.templateContent | default("") | excerptWords(50)) %}
-    {% if excerptText %}
-    <p class="post-preview__excerpt">{{ excerptText }}</p>
+
+<div class="home-layout">
+  <aside class="sidebar">
+    <nav class="sidebar__nav">
+      <h2 class="section-title">Recent Posts</h2>
+      <ul>
+        {% for post in collections.posts | reverse %}
+        {% if loop.index0 < 10 %}
+        <li>
+          <a href="#post-{{ post.data.page.fileSlug }}" data-post="{{ post.data.page.fileSlug }}">{{ post.data.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% if collections.posts.length > 10 %}
+      <a href="/posts.html" class="sidebar__all-posts">All posts ({{ collections.posts.length }})</a>
+      {% endif %}
+    </nav>
+  </aside>
+
+  <div class="home-content">
+    {% for post in collections.posts | reverse %}
+    {% if loop.index0 < 10 %}
+    <article class="full-post" id="post-{{ post.data.page.fileSlug }}">
+      {% if post.data.featuredImage %}
+      <div class="post-featured-img">
+        <img src="{{ post.data.featuredImage }}" alt="{{ post.data.featuredImageAlt or post.data.title }}" loading="lazy">
+      </div>
+      {% endif %}
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      <div class="post-meta">{{ post.data.date | dateDisplay }}{% if post.data.category %} · {{ post.data.category }}{% endif %}</div>
+      <div class="full-post__content">
+        {{ post.templateContent | safe }}
+      </div>
+    </article>
     {% endif %}
-    <a href="{{ post.url }}" class="post-preview__read-more">Read more →</a>
-  </li>
-  {% endif %}
-  {% endfor %}
-</ul>
-{% if collections.posts.length > 5 %}
-<p class="more-posts"><a href="/posts.html">All posts ({{ collections.posts.length }})</a></p>
-{% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<a href="#" class="back-to-top" aria-label="Back to top">↑ Top</a>
+
+<script>
+(function() {
+  var posts = document.querySelectorAll('.full-post');
+  var links = document.querySelectorAll('.sidebar__nav a');
+  if (!posts.length || !links.length) return;
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.id.replace('post-', '');
+        links.forEach(function(link) {
+          link.classList.toggle('active', link.dataset.post === id);
+        });
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+
+  posts.forEach(function(post) { observer.observe(post); });
+
+  // Back to top visibility
+  var btn = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', function() {
+    btn.classList.toggle('visible', window.scrollY > 600);
+  });
+})();
+</script>

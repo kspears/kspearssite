@@ -3,8 +3,8 @@ title: Heel Drop in Running Shoes
 date: 2025-03-26
 tags: posts
 category: Running
-featuredImage: /static/images/running-shoe.png
-featuredImageAlt: Running shoe
+featuredImage: /static/images/running-shoe-opt.jpg
+featuredImageAlt: Running shoe showing heel drop measurement
 ---
 
 One of the things I didn't know about when I began running and shopping for shoes is a small but crucial factor: heel drop—the difference in height between the heel and forefoot. While traditional running shoes often have a higher heel drop (10-12mm), lower-drop shoes (0-6mm) are gaining popularity among runners. But is less heel drop better? Let's break it down.

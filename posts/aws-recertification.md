@@ -2,8 +2,8 @@
 title: AWS Solution Architect Professional
 date: 2023-05-23
 category: Training
-featuredImage: /static/images/aws_certified_logo.png
-featuredImageAlt: AWS Certified
+featuredImage: /static/images/aws-cert-badge.svg
+featuredImageAlt: AWS certification badge
 ---
 
 I had let my AWS Solution Architect Professional certification expire as I didn't have a lot of spare time during my previous role. So I figured now with my surplus of time I would work on renewing it.

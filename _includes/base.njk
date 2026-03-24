@@ -6,7 +6,7 @@
   <title>{% if title %}{{ title }}{% if title != "kspears.com" %} - kspears.com{% endif %}{% else %}kspears.com{% endif %}</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
   {% include "header.njk" %}
 
   <div class="container">
