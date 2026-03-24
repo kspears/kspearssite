@@ -1,0 +1,63 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#ffffff"/>
+  <g transform="translate(395, 195)">
+    <!-- Outsole bottom edge -->
+    <path d="M-195,65 C-170,68 -50,70 50,68 C120,66 170,60 195,48 C205,42 208,35 200,30" fill="none" stroke="#8b7355" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Outsole tread marks -->
+    <path d="M-180,66 L-180,62" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M-150,67 L-150,63" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M-120,68 L-120,64" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M-90,68 L-90,64" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M-60,69 L-60,65" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M-30,69 L-30,65" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M0,69 L0,65" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M30,68 L30,64" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M60,68 L60,64" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M90,67 L90,63" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M120,65 L120,61" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <path d="M150,62 L150,58" stroke="#8b7355" stroke-width="1" opacity="0.3"/>
+    <!-- Midsole top edge -->
+    <path d="M-195,40 C-170,42 -50,45 50,44 C120,42 170,36 195,25 C202,20 200,30 200,30" fill="none" stroke="#8b7355" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Midsole fill -->
+    <path d="M-195,40 C-170,42 -50,45 50,44 C120,42 170,36 195,25 C202,20 208,35 200,30 C205,42 208,35 195,48 C170,60 120,66 50,68 C-50,70 -170,68 -195,65 Z" fill="#8b7355" opacity="0.08"/>
+    <!-- Heel back -->
+    <path d="M-195,40 L-195,65" stroke="#8b7355" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Upper shoe -->
+    <path d="M-195,40 C-192,20 -185,0 -170,-20 C-150,-45 -110,-65 -60,-75 C-20,-80 20,-78 60,-68 C100,-55 140,-35 170,-10 C185,0 195,15 195,25" fill="#8b7355" opacity="0.06" stroke="#8b7355" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Collar padding -->
+    <path d="M-190,10 C-185,-5 -175,-18 -165,-25" fill="none" stroke="#3d7a8a" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+    <!-- Heel overlay panel -->
+    <path d="M-195,40 C-192,25 -188,10 -182,-5 L-165,-5 C-172,10 -178,25 -180,40" fill="none" stroke="#8b7355" stroke-width="1" opacity="0.25"/>
+    <!-- Midfoot panel line -->
+    <path d="M-80,-68 C-40,-30 20,-10 80,-5" fill="none" stroke="#8b7355" stroke-width="1" opacity="0.2"/>
+    <!-- Toe box mesh dots -->
+    <circle cx="140" cy="-15" r="1.2" fill="#8b7355" opacity="0.15"/>
+    <circle cx="150" cy="-8" r="1.2" fill="#8b7355" opacity="0.15"/>
+    <circle cx="155" cy="0" r="1.2" fill="#8b7355" opacity="0.15"/>
+    <circle cx="160" cy="8" r="1.2" fill="#8b7355" opacity="0.15"/>
+    <circle cx="130" cy="-22" r="1.2" fill="#8b7355" opacity="0.15"/>
+    <circle cx="145" cy="-2" r="1.2" fill="#8b7355" opacity="0.15"/>
+    <circle cx="135" cy="5" r="1.2" fill="#8b7355" opacity="0.15"/>
+    <circle cx="120" cy="-10" r="1.2" fill="#8b7355" opacity="0.15"/>
+    <circle cx="165" cy="15" r="1.2" fill="#8b7355" opacity="0.15"/>
+    <!-- Lace eyelets and laces -->
+    <circle cx="-55" cy="-72" r="2" fill="none" stroke="#3d7a8a" stroke-width="1" opacity="0.5"/>
+    <circle cx="-25" cy="-77" r="2" fill="none" stroke="#3d7a8a" stroke-width="1" opacity="0.5"/>
+    <circle cx="5" cy="-76" r="2" fill="none" stroke="#3d7a8a" stroke-width="1" opacity="0.5"/>
+    <circle cx="35" cy="-70" r="2" fill="none" stroke="#3d7a8a" stroke-width="1" opacity="0.5"/>
+    <line x1="-53" y1="-72" x2="-27" y2="-77" stroke="#3d7a8a" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-23" y1="-77" x2="3" y2="-76" stroke="#3d7a8a" stroke-width="0.8" opacity="0.3"/>
+    <line x1="7" y1="-76" x2="33" y2="-70" stroke="#3d7a8a" stroke-width="0.8" opacity="0.3"/>
+    <!-- Tongue -->
+    <path d="M-45,-72 C-40,-88 -20,-95 0,-93 C20,-91 35,-82 38,-70" fill="#ffffff" stroke="#8b7355" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Heel drop measurement -->
+    <line x1="-220" y1="65" x2="-220" y2="40" stroke="#b55a3c" stroke-width="1.5"/>
+    <line x1="-228" y1="65" x2="-212" y2="65" stroke="#b55a3c" stroke-width="1.5"/>
+    <line x1="-228" y1="40" x2="-212" y2="40" stroke="#b55a3c" stroke-width="1.5"/>
+    <!-- Arrow heads -->
+    <polygon points="-220,63 -217,58 -223,58" fill="#b55a3c"/>
+    <polygon points="-220,42 -217,47 -223,47" fill="#b55a3c"/>
+    <text x="-260" y="56" text-anchor="middle" font-family="monospace" font-size="11" fill="#b55a3c" transform="rotate(-90, -260, 56)">Heel Drop</text>
+  </g>
+</svg>

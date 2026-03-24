@@ -2,8 +2,8 @@
 title: Traefik Adventures
 date: 2024-04-05
 category: Hosting
-featuredImage: /static/images/traefik-logo.jpg
-featuredImageAlt: Traefik
+featuredImage: /static/images/traefik-routing.svg
+featuredImageAlt: Traefik reverse proxy routing diagram
 ---
 
 At work I was looking into ways to decrease our AWS Public IP usage. We, along with the rest of the world were hit with monthly cost of using too many IP addresses. And it was not a total surprise since AWS announced this was coming, the price tag was a bit of shock though as I hadn't realized how many Public IP's we were using.

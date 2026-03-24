@@ -4,7 +4,8 @@
   "description": "kspears.com - static site built with Eleventy",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "new": "node scripts/new-post.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"

@@ -1,7 +1,10 @@
 ---
 title: Site Is Back
 date: 2023-04-18
+tags: posts
 category: Site News
+featuredImage: /static/images/site-relaunch.svg
+featuredImageAlt: Browser window showing kspears.com
 ---
 
 The year of stress and crazy is over and I wanted to get back to working on this blog. I refreshed the theme with something simpler and updated the pipeline... Now I just need to write some content.

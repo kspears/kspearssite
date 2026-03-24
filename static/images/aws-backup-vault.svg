@@ -1,0 +1,34 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#ffffff"/>
+  <!-- Source DB -->
+  <g transform="translate(180, 130)">
+    <ellipse cx="0" cy="0" rx="40" ry="14" fill="#ffffff" stroke="#3d7a8a" stroke-width="1.5"/>
+    <rect x="-40" y="0" width="80" height="55" fill="#ffffff" stroke="#3d7a8a" stroke-width="1.5"/>
+    <ellipse cx="0" cy="55" rx="40" ry="14" fill="#ffffff" stroke="#3d7a8a" stroke-width="1.5"/>
+    <text x="0" y="90" text-anchor="middle" font-family="monospace" font-size="11" fill="#3d7a8a">RDS</text>
+  </g>
+  <!-- Arrow 1 -->
+  <line x1="235" y1="160" x2="320" y2="160" stroke="#b55a3c" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <polygon points="320,156 330,160 320,164" fill="#b55a3c"/>
+  <!-- Backup vault 1 -->
+  <g transform="translate(400, 120)">
+    <rect x="-50" y="-10" width="100" height="80" rx="4" fill="#ffffff" stroke="#8b7355" stroke-width="1.5"/>
+    <line x1="-50" y1="10" x2="50" y2="10" stroke="#8b7355" stroke-width="1.5"/>
+    <circle cx="-30" cy="0" r="5" fill="none" stroke="#b55a3c" stroke-width="1.5"/>
+    <text x="0" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#8b7355">backup</text>
+    <text x="0" y="53" text-anchor="middle" font-family="monospace" font-size="10" fill="#8b7355">us-east-1</text>
+    <text x="0" y="90" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#8b7355">Backup Acct</text>
+  </g>
+  <!-- Arrow 2 -->
+  <line x1="465" y1="160" x2="540" y2="160" stroke="#b55a3c" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <polygon points="540,156 550,160 540,164" fill="#b55a3c"/>
+  <!-- Backup vault 2 (DR) -->
+  <g transform="translate(620, 120)">
+    <rect x="-50" y="-10" width="100" height="80" rx="4" fill="#ffffff" stroke="#c4a882" stroke-width="1.5"/>
+    <line x1="-50" y1="10" x2="50" y2="10" stroke="#c4a882" stroke-width="1.5"/>
+    <circle cx="-30" cy="0" r="5" fill="none" stroke="#b55a3c" stroke-width="1.5"/>
+    <text x="0" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#c4a882">backup</text>
+    <text x="0" y="53" text-anchor="middle" font-family="monospace" font-size="10" fill="#c4a882">us-west-2</text>
+    <text x="0" y="90" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#c4a882">DR Copy</text>
+  </g>
+</svg>

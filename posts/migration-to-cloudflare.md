@@ -3,6 +3,8 @@ title: Prison Fellowship's Migration to Cloudflare
 date: 2025-03-21
 tags: posts
 category: Hosting
+featuredImage: /static/images/cloudflare-migration.svg
+featuredImageAlt: Cloudflare CDN network diagram
 ---
 
 As a long-time advocate of Cloudflare, I have relied on their services for my personal DNS hosting for several years. Their robust features and user-friendly interface have made my experience seamless and efficient. Recently, I took on the task of migrating all of Prison Fellowship's DNS to Cloudflare, which presented a new challenge: deciding between their Pro and Business level plans. After extensive research and several enlightening sessions with ChatGPT, I concluded that the Pro plan would adequately meet our needs for the time being.
