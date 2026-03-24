@@ -8,7 +8,7 @@ featuredImageAlt: Traefik reverse proxy routing diagram
 
 At work I was looking into ways to decrease our AWS Public IP usage. We, along with the rest of the world were hit with monthly cost of using too many IP addresses. And it was not a total surprise since AWS announced this was coming, the price tag was a bit of shock though as I hadn't realized how many Public IP's we were using.
 
-So I starting thinking through the problem and thought, well what if we routed our traffic through a single load balancer and then hit some sort of internal load balancer to route traffic to our various apps and whatnot. So after a little bit of searching I decided to check out Traefik as it seems to have the features that I think I'll need.
+So I started thinking through the problem and thought, well what if we routed our traffic through a single load balancer and then hit some sort of internal load balancer to route traffic to our various apps and whatnot. So after a little bit of searching I decided to check out Traefik as it seems to have the features that I think I'll need.
 
 I have never used Traefik before so I decided to try it in my home lab, switching out Nginx Proxy Manager.
 
