@@ -7,44 +7,31 @@ featuredImage: /static/images/aws-databases.svg
 featuredImageAlt: Aurora vs Redshift database comparison
 ---
 
-At work we are looking into moving from a data dumping ground into a real data warehouse solution. So this took me down a rabbit hole of what should we use to host this ever expanding database? Since we are hosting in AWS two commonly considered AWS services for analytical workloads are Amazon Aurora and Amazon Redshift. While both are powerful, they serve different purposes and are optimized for different types of workloads. So to sort out which way to go, here's a brief overview of the two solutions that helped me work through this decision:
+At work we needed to move from what was essentially a data dumping ground into a real data warehouse. So I went down the rabbit hole of figuring out what we should use. Since we're on AWS the two obvious contenders were Aurora and Redshift.
 
-## Understanding Aurora and Redshift
+## The Quick Comparison
 
-### Amazon Aurora
-
-Amazon Aurora is a relational database service (RDS) that provides high performance and availability. It is compatible with both MySQL and PostgreSQL, offering managed features such as automated backups, scaling, and replication.
-
-### Amazon Redshift
-
-Amazon Redshift is a fully managed data warehouse designed for fast querying and analytical processing over large datasets. It is optimized for Online Analytical Processing (OLAP) workloads and integrates deeply with AWS analytics services like AWS Glue and Amazon Quicksight.
-
-### Key Differences
-
-| Feature | Amazon Aurora | Amazon Redshift |
-|---------|---------------|-----------------|
+| Feature | Aurora | Redshift |
+|---------|--------|----------|
 | Type | Relational Database (OLTP) | Data Warehouse (OLAP) |
-| Workload | Transactional & Mixed Workloads | Analytical & Reporting |
-| Data Structure | Row-based | Columnar-based |
-| Query Performance | Optimized for small queries with high concurrency | Optimized for complex queries over large datasets |
-| Scalability | Scales read replicas horizontally, limited vertical scaling | Massively parallel processing (MPP) for high scalability |
-| Storage Model | Replicated storage across multiple AZs | Distributed columnar storage |
-| Best For | Applications needing high-performance transactions | Business Intelligence, Data Lakes, and Analytics |
+| Workload | Transactional & mixed | Analytical & reporting |
+| Data Structure | Row-based | Columnar |
+| Query Performance | Small queries, high concurrency | Complex queries over large datasets |
+| Scalability | Read replicas, vertical scaling | Massively parallel processing |
+| Best For | Transactions, operational data | BI, data lakes, analytics |
 
-## Which One Should You Choose for Data Warehousing?
+On paper Redshift is the "correct" answer for a data warehouse. It's purpose-built for analytical workloads with columnar storage and massively parallel processing. If you're running complex queries over petabytes of data it's the obvious choice.
 
-### Choose Amazon Aurora if:
+## What We Actually Did
 
-- Your workload requires frequent transactions and OLTP-like operations.
-- You need an operational data store with some analytical capabilities.
-- Your dataset is relatively small, and you require real-time access to data.
+We went with Aurora (Postgres).
 
-### Choose Amazon Redshift if:
+Our dataset is only a few terabytes... large for us but not the kind of scale where Redshift really starts to shine. The bigger factor was that our team already knows Postgres. We didn't have the time to give Redshift a proper MVP, learn its quirks, build out the ETL pipelines, and train the team on a new query engine all at once.
 
-- Your primary goal is big data analytics.
-- You need to run complex queries over terabytes or petabytes of data.
-- You require a scalable and cost-effective data warehouse with optimized storage and querying.
+Sometimes the right tool is the one your team can actually operate well. Aurora gave us a real database with proper structure to replace the dumping ground, and we could move fast because everyone already knew how to work with it.
 
-## So what should I use?
+## When Redshift Would Make Sense
 
-This is a brief blog post that describes the research I went through. My conclusion is Aurora is best for transactional databases and operational reporting and Redshift is purpose-built for data warehousing and analytics. If you need real-time analytics on live transactional data, you might even consider using both together—storing operational data in Aurora and periodically ETL-ing it into Redshift for deeper analysis.
+If our data grows significantly or we start needing heavy analytical workloads... aggregations across billions of rows, complex joins across huge tables... we'd revisit Redshift. You could even run both, storing operational data in Aurora and ETL-ing it into Redshift for deeper analysis.
+
+But for now Aurora is doing the job and we're not fighting our tooling to get there.

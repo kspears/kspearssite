@@ -7,36 +7,28 @@ featuredImage: /static/images/cloudflare-migration.svg
 featuredImageAlt: Cloudflare CDN network diagram
 ---
 
-As a long-time advocate of Cloudflare, I have relied on their services for my personal DNS hosting for several years. Their robust features and user-friendly interface have made my experience seamless and efficient. Recently, I took on the task of migrating all of Prison Fellowship's DNS to Cloudflare, which presented a new challenge: deciding between their Pro and Business level plans. After extensive research and several enlightening sessions with ChatGPT, I concluded that the Pro plan would adequately meet our needs for the time being.
+I've been using Cloudflare for my personal domains for a few years now so when the topic came up at work to move Prison Fellowship's DNS I already knew what we were getting into. DNS isn't that complicated... as long as you don't fat finger it.
 
-If you find yourself grappling with a similar decision, I'd like to share my thought process regarding the Business plan and why I ultimately leaned towards the Pro plan.
+## The Migration
 
-## 1. Support Availability
+We put all of our DNS zone info into Terraform which was honestly the most valuable part of the whole project. Going through every record forced us to audit what we actually had. We found several dead domains that nobody was using anymore and a few that needed to be migrated over to our sister organization. That kind of cleanup doesn't happen unless you're forced to look at everything.
 
-One of the most significant advantages of the Business plan is the 24/7/365 support. This feature is particularly beneficial for organizations that operate e-commerce sites or have critical applications that require constant uptime. With round-the-clock support, any issues can be addressed immediately, minimizing potential downtime and ensuring a smooth user experience. However, for Prison Fellowship, our current operations do not necessitate this level of support.
+We also moved our domain registrar from Network Solutions to Cloudflare. The renewal pricing alone made this worth it... we're paying significantly less now for registration renewals.
 
-## 2. Web Application Firewall (WAF) Rules
+## What We Gained
 
-The Business plan includes a more extensive Web Application Firewall (WAF) with 50 rules, compared to the 20 rules offered in the Pro plan. This is a crucial consideration for organizations that need robust security measures to protect against various online threats, such as SQL injection and cross-site scripting. Since we were migrating from the Free plan, I wanted to assess whether the 20 WAF rules would adequately meet our security needs before committing to the more expensive Business plan. This approach allows us to evaluate our security posture without incurring unnecessary costs upfront.
+The DNS migration was table stakes. The real wins were everything else Cloudflare gives you once your domains are on their platform:
 
-## 3. Custom SSL Certificates
+- **WAF** — We were excited to turn this on. Having a web application firewall in front of our sites without managing it ourselves is a huge improvement to our security posture.
+- **Caching** — Immediate performance boost for our public-facing sites with minimal configuration.
+- **Security features** — DDoS protection, SSL management, bot detection... all just there once you're on the platform.
 
-Another feature exclusive to the Business plan is the ability to use custom SSL certificates. While this option is valuable for many organizations that require specific branding or compliance needs, it was not a necessity for us at this time. The Universal SSL provided by Cloudflare offers robust security for our website, and we are currently satisfied with this level of protection. As our organization grows and our needs evolve, we can always revisit the option of custom SSL certificates if required.
+## Pro vs Business Plan
 
-## 4. Detailed Analytics
+I spent some time deciding between Cloudflare's Pro and Business plans. The Business plan has 24/7 support, more WAF rules (50 vs 20), custom SSL certificates, and advanced DDoS protection. All good stuff but overkill for where we are right now.
 
-The Business plan also provides access to more detailed analytics, which can be beneficial for organizations looking to gain deeper insights into their web traffic and performance metrics. While I was intrigued by the prospect of having access to more comprehensive data, I ultimately decided that the analytics offered in the Pro plan would be sufficient for our initial needs. The Pro plan still provides valuable insights that can help us monitor our website's performance and make informed decisions without overwhelming us with data.
+We went with Pro. It covers our needs and we can always upgrade later if the 20 WAF rules feel limiting or we need the enhanced support. No reason to pay for features we aren't going to use on day one.
 
-## 5. Advanced DDoS Protection
+## Surprises?
 
-One of the most compelling features of the Business plan is its advanced DDoS protection. This is particularly crucial for organizations that may be at risk of targeted attacks, as it helps safeguard against service disruptions. While this was a significant selling point for the Business plan, I wanted to first evaluate how the Pro plan performed in terms of security and traffic management. By starting with the Pro plan, we can monitor our website's performance and security measures before deciding if we need the enhanced DDoS protection offered by the Business plan.
-
-## Wrap-Up
-
-After carefully weighing the features and benefits of both the Pro and Business plans, I determined that the Pro plan would serve our needs at Prison Fellowship for the time being. It offers a solid foundation of security and performance features without the higher cost associated with the Business plan.
-
-**Pro Plan:** Ideal for small to medium-sized businesses that require enhanced security and performance features without the higher price tag. It provides essential tools to manage DNS effectively while keeping costs manageable.
-
-**Business Plan:** Tailored for larger organizations or those with more complex needs, offering advanced features, better support, and higher limits. This plan is perfect for businesses that require constant uptime and extensive security measures.
-
-As we grow and our requirements evolve, I remain open to revisiting the Business plan to take advantage of its additional capabilities. If you're facing a similar decision, I hope my thought process helps guide you in choosing the right Cloudflare plan for your organization.
+Honestly... not really. Since I'd already done this for my personal domains I knew the process well. The biggest effort was the Terraform work and the domain audit, not the actual migration itself. Sometimes the boring migrations are the best ones.
