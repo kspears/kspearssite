@@ -37,7 +37,6 @@ body {
   -webkit-font-smoothing: antialiased;
   border-top: 3px solid var(--accent);
   overflow-x: hidden;
-  max-width: 100vw;
 }
 
 /* Topo contour background */
@@ -235,7 +234,6 @@ main {
   grid-template-columns: 200px 1fr;
   gap: 3rem;
   align-items: start;
-  overflow: hidden;
 }
 
 /* Sidebar */
@@ -369,11 +367,6 @@ main {
 
 .full-post__content {
   overflow-x: auto;
-}
-
-.full-post__content h2 {
-  font-size: 1.25rem;
-  color: var(--accent);
 }
 
 /* Post featured image */
@@ -621,10 +614,8 @@ main > h1 {
 @media (max-width: 768px) {
   .has-sidebar .container {
     max-width: 100%;
-    width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
-    overflow-x: hidden;
   }
 
   .has-sidebar header .header-inner {
