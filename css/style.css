@@ -20,7 +20,10 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   font-family: 'Space Grotesk', system-ui, sans-serif;
@@ -764,22 +767,7 @@ main > h1 {
   }
 
   .sidebar {
-    position: static;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .sidebar__nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem 0.5rem;
-  }
-
-  .sidebar__nav ul a {
-    border-left: none;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.8125rem;
+    display: none;
   }
 
   .full-post__content pre,
