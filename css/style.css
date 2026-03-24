@@ -233,6 +233,7 @@ main {
   grid-template-columns: 200px 1fr;
   gap: 3rem;
   align-items: start;
+  overflow: hidden;
 }
 
 /* Sidebar */
@@ -324,6 +325,7 @@ main {
 
 .home-content {
   min-width: 0;
+  overflow: hidden;
 }
 
 /* Full post on home page */
@@ -361,6 +363,10 @@ main {
 
 .full-post .post-featured-img {
   margin-bottom: 1.25rem;
+}
+
+.full-post__content {
+  overflow-x: auto;
 }
 
 .full-post__content h2 {
