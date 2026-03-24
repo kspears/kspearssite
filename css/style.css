@@ -63,9 +63,6 @@ body::before {
 
 .has-sidebar .container {
   max-width: 1100px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  z-index: 1;
 }
 
 /* Header — fixed bar */
@@ -95,10 +92,8 @@ header .header-inner {
 }
 
 .has-sidebar header .header-inner {
-  max-width: min(1100px, 90vw);
+  max-width: 1100px;
 }
-
-/* container padding-top handled above */
 
 header h1 {
   font-size: 1.125rem;
@@ -228,53 +223,6 @@ main {
   color: var(--text-muted);
   margin-top: 0.2rem;
   letter-spacing: 0.01em;
-}
-
-/* Home post previews */
-.post-list--preview .post-preview {
-  display: block;
-}
-
-.post-preview__link {
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
-  text-decoration: none;
-  color: var(--text);
-}
-
-.post-preview__link:hover .post-preview__title {
-  color: var(--link);
-}
-
-.post-preview__img {
-  width: 120px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 6px;
-  flex-shrink: 0;
-  border: 1.5px solid var(--border);
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(44, 42, 39, 0.08);
-}
-
-.post-preview__body {
-  flex: 1;
-  min-width: 0;
-}
-
-.post-preview__title {
-  display: block;
-  font-weight: 500;
-  font-size: 1.0625rem;
-  transition: color 0.2s;
-}
-
-.post-preview__excerpt {
-  margin: 0.4rem 0 0;
-  font-size: 0.9375rem;
-  color: var(--text-muted);
-  line-height: 1.6;
 }
 
 /* Home two-column layout */
@@ -414,120 +362,6 @@ main {
   color: var(--accent);
 }
 
-.full-post__content h3 {
-  font-size: 1.0625rem;
-  font-weight: 600;
-  margin: 2rem 0 0.5rem 0;
-}
-
-.full-post__content p {
-  margin: 0 0 1.25rem 0;
-}
-
-.full-post__content ul,
-.full-post__content ol {
-  margin: 0 0 1.25rem 0;
-  padding-left: 1.5rem;
-}
-
-.full-post__content li {
-  margin: 0.3rem 0;
-}
-
-.full-post__content li::marker {
-  color: var(--trail);
-}
-
-.full-post__content pre {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8125rem;
-  line-height: 1.65;
-  background: var(--code-bg);
-  color: var(--code-text);
-  padding: 1.25rem 1.5rem;
-  overflow-x: auto;
-  border-radius: 4px;
-  margin: 1.5rem -1rem;
-  border-top: 2px solid var(--accent);
-}
-
-.full-post__content code {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.875em;
-}
-
-.full-post__content pre code {
-  background: none;
-  padding: 0;
-  color: inherit;
-}
-
-.full-post__content :not(pre) > code {
-  background: var(--accent-soft);
-  color: var(--accent);
-  padding: 0.15em 0.4em;
-  border-radius: 3px;
-}
-
-.full-post__content a {
-  color: var(--link);
-  text-decoration: underline;
-  text-decoration-color: rgba(74, 102, 112, 0.3);
-  text-underline-offset: 2px;
-  transition: text-decoration-color 0.2s;
-}
-
-.full-post__content a:hover {
-  text-decoration-color: var(--link);
-}
-
-.full-post__content blockquote {
-  margin: 1.5rem 0;
-  padding: 0 0 0 1.25rem;
-  border-left: 3px solid var(--ridge);
-  color: var(--text-muted);
-}
-
-.full-post__content blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-.full-post__content table {
-  width: calc(100% + 2rem);
-  border-collapse: collapse;
-  margin: 1.5rem -1rem;
-  font-size: 0.9375rem;
-}
-
-.full-post__content th,
-.full-post__content td {
-  padding: 0.6rem 1rem;
-  text-align: left;
-  border-bottom: 1px solid var(--border);
-}
-
-.full-post__content th {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-}
-
-.full-post__content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.full-post__content hr {
-  border: none;
-  height: 1px;
-  background: var(--border);
-  margin: 2.5rem 0;
-}
-
 /* Post featured image */
 .post-featured-img {
   margin: 0 0 2rem 0;
@@ -546,7 +380,7 @@ main {
   margin: 0;
 }
 
-/* Article typography */
+/* Prose typography — shared by article pages and inline posts */
 article h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -561,7 +395,8 @@ article .post-meta {
   border-bottom: 1px solid var(--border);
 }
 
-article h2 {
+article h2,
+.full-post__content h2 {
   font-size: 1.25rem;
   font-weight: 600;
   margin: 2.5rem 0 0.75rem 0;
@@ -569,31 +404,37 @@ article h2 {
   color: var(--accent);
 }
 
-article h3 {
+article h3,
+.full-post__content h3 {
   font-size: 1.0625rem;
   font-weight: 600;
   margin: 2rem 0 0.5rem 0;
 }
 
-article p {
+article p,
+.full-post__content p {
   margin: 0 0 1.25rem 0;
 }
 
-article ul, article ol {
+article ul, article ol,
+.full-post__content ul,
+.full-post__content ol {
   margin: 0 0 1.25rem 0;
   padding-left: 1.5rem;
 }
 
-article li {
+article li,
+.full-post__content li {
   margin: 0.3rem 0;
 }
 
-article li::marker {
+article li::marker,
+.full-post__content li::marker {
   color: var(--trail);
 }
 
-/* Code — dark terminal */
-article pre {
+article pre,
+.full-post__content pre {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8125rem;
   line-height: 1.65;
@@ -606,49 +447,58 @@ article pre {
   border-top: 2px solid var(--accent);
 }
 
-article code {
+article code,
+.full-post__content code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.875em;
 }
 
-article pre code {
+article pre code,
+.full-post__content pre code {
   background: none;
   padding: 0;
   color: inherit;
 }
 
-article :not(pre) > code {
+article :not(pre) > code,
+.full-post__content :not(pre) > code {
   background: var(--accent-soft);
   color: var(--accent);
   padding: 0.15em 0.4em;
   border-radius: 3px;
 }
 
-article blockquote {
+article blockquote,
+.full-post__content blockquote {
   margin: 1.5rem 0;
   padding: 0 0 0 1.25rem;
   border-left: 3px solid var(--ridge);
   color: var(--text-muted);
 }
 
-article blockquote p:last-child {
+article blockquote p:last-child,
+.full-post__content blockquote p:last-child {
   margin-bottom: 0;
 }
 
-article table {
+article table,
+.full-post__content table {
   width: calc(100% + 2rem);
   border-collapse: collapse;
   margin: 1.5rem -1rem;
   font-size: 0.9375rem;
 }
 
-article th, article td {
+article th, article td,
+.full-post__content th,
+.full-post__content td {
   padding: 0.6rem 1rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
 }
 
-article th {
+article th,
+.full-post__content th {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
   font-weight: 500;
@@ -657,13 +507,15 @@ article th {
   color: var(--text-muted);
 }
 
-article img {
+article img,
+.full-post__content img {
   max-width: 100%;
   height: auto;
   border-radius: 4px;
 }
 
-article a {
+article a,
+.full-post__content a {
   color: var(--link);
   text-decoration: underline;
   text-decoration-color: rgba(74, 102, 112, 0.3);
@@ -671,11 +523,13 @@ article a {
   transition: text-decoration-color 0.2s;
 }
 
-article a:hover {
+article a:hover,
+.full-post__content a:hover {
   text-decoration-color: var(--link);
 }
 
-article hr {
+article hr,
+.full-post__content hr {
   border: none;
   height: 1px;
   background: var(--border);
@@ -813,14 +667,12 @@ main > h1 {
     font-size: 1.625rem;
   }
 
-  article pre,
-  .full-post__content pre {
+  article pre {
     margin-left: 0;
     margin-right: 0;
   }
 
-  article table,
-  .full-post__content table {
+  article table {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
