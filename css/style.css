@@ -36,6 +36,7 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   border-top: 3px solid var(--accent);
+  overflow-x: hidden;
 }
 
 /* Topo contour background */
@@ -44,8 +45,8 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   background-image:
     url("data:image/svg+xml,%3Csvg width='1200' height='900' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cstyle%3Epath%7Bfill:none;stroke-linecap:round%7D%3C/style%3E%3C/defs%3E%3Cpath d='M-100 200 Q100 140 300 180 Q500 220 700 160 Q900 100 1100 170 Q1200 200 1400 160' stroke='%23c4a882' stroke-width='1' opacity='0.12'/%3E%3Cpath d='M-100 240 Q150 190 350 220 Q550 260 750 200 Q950 140 1150 210 Q1250 240 1400 200' stroke='%23c4a882' stroke-width='1' opacity='0.1'/%3E%3Cpath d='M-100 290 Q120 250 320 270 Q520 300 720 250 Q920 200 1120 260 Q1250 290 1400 250' stroke='%23c4a882' stroke-width='0.8' opacity='0.08'/%3E%3Cpath d='M-100 550 Q200 490 400 530 Q600 570 800 510 Q1000 450 1200 520 Q1300 550 1400 510' stroke='%236a9aaa' stroke-width='1' opacity='0.1'/%3E%3Cpath d='M-100 590 Q180 540 380 570 Q580 610 780 550 Q980 490 1180 560 Q1300 590 1400 550' stroke='%236a9aaa' stroke-width='0.8' opacity='0.08'/%3E%3Cpath d='M-100 640 Q160 600 360 620 Q560 650 760 600 Q960 550 1160 610 Q1300 640 1400 600' stroke='%236a9aaa' stroke-width='0.8' opacity='0.06'/%3E%3Cpath d='M-100 750 Q250 700 450 740 Q650 780 850 720 Q1050 660 1250 730' stroke='%23c4a882' stroke-width='1.2' opacity='0.09'/%3E%3Cpath d='M-100 800 Q220 760 420 785 Q620 820 820 770 Q1020 720 1220 780' stroke='%23c4a882' stroke-width='0.8' opacity='0.06'/%3E%3Ccircle cx='920' cy='520' r='3' fill='%23b55a3c' opacity='0.15'/%3E%3Ctext x='930' y='524' font-family='monospace' font-size='8' fill='%23b55a3c' opacity='0.12'%3E4892%3C/text%3E%3Ccircle cx='340' cy='210' r='3' fill='%23b55a3c' opacity='0.15'/%3E%3Ctext x='350' y='214' font-family='monospace' font-size='8' fill='%23b55a3c' opacity='0.12'%3E5210%3C/text%3E%3C/svg%3E");
   background-size: cover;
@@ -61,10 +62,6 @@ body::before {
   padding: calc(3rem + 1.5rem) 1.5rem 0;
   position: relative;
   z-index: 1;
-}
-
-.has-sidebar .container {
-  max-width: 1100px;
 }
 
 /* Header — fixed bar */
@@ -93,9 +90,6 @@ header .header-inner {
   align-items: baseline;
 }
 
-.has-sidebar header .header-inner {
-  max-width: 1100px;
-}
 
 header h1 {
   font-size: 1.125rem;
@@ -324,6 +318,7 @@ main {
 
 .home-content {
   min-width: 0;
+  overflow: hidden;
 }
 
 /* Full post on home page */
@@ -363,9 +358,8 @@ main {
   margin-bottom: 1.25rem;
 }
 
-.full-post__content h2 {
-  font-size: 1.25rem;
-  color: var(--accent);
+.full-post__content {
+  overflow-x: auto;
 }
 
 /* Post featured image */
@@ -611,17 +605,6 @@ main > h1 {
 
 /* Responsive — tablet */
 @media (max-width: 768px) {
-  .has-sidebar .container {
-    max-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .has-sidebar header .header-inner {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
   .home-layout {
     grid-template-columns: 1fr;
     gap: 0;
