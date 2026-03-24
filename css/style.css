@@ -23,6 +23,8 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 body {
@@ -320,6 +322,10 @@ main {
   border-color: var(--accent);
 }
 
+.home-content {
+  min-width: 0;
+}
+
 /* Full post on home page */
 .full-post {
   margin-bottom: 3rem;
@@ -445,6 +451,7 @@ article pre,
   border-radius: 4px;
   margin: 1.5rem -1rem;
   border-top: 2px solid var(--accent);
+  max-width: calc(100% + 2rem);
 }
 
 article code,
@@ -625,10 +632,13 @@ main > h1 {
   }
 
   .full-post__content pre,
-  .full-post__content table {
+  .full-post__content table,
+  article pre,
+  article table {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -670,10 +680,13 @@ main > h1 {
   article pre {
     margin-left: 0;
     margin-right: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   article table {
     width: 100%;
+    max-width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
