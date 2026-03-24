@@ -64,10 +64,6 @@ body::before {
   z-index: 1;
 }
 
-.has-sidebar .container {
-  max-width: 1100px;
-}
-
 /* Header — fixed bar */
 header {
   position: fixed;
@@ -94,9 +90,6 @@ header .header-inner {
   align-items: baseline;
 }
 
-.has-sidebar header .header-inner {
-  max-width: 1100px;
-}
 
 header h1 {
   font-size: 1.125rem;
@@ -612,17 +605,6 @@ main > h1 {
 
 /* Responsive — tablet */
 @media (max-width: 768px) {
-  .has-sidebar .container {
-    max-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .has-sidebar header .header-inner {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
   .home-layout {
     grid-template-columns: 1fr;
     gap: 0;
